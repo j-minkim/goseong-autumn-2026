@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" role="img" aria-label="늦가을 동해 수평선과 해안을 표현한 일러스트">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d3a52"/>
+      <stop offset="0.42" stop-color="#5e8db0"/>
+      <stop offset="0.6" stop-color="#d9b98a"/>
+      <stop offset="0.66" stop-color="#e9d2b0"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f6f8d"/>
+      <stop offset="0.5" stop-color="#1c4f6a"/>
+      <stop offset="1" stop-color="#143747"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6d6bb"/>
+      <stop offset="1" stop-color="#c9b48f"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#21404f"/>
+      <stop offset="1" stop-color="#2d5468"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff2d6" stop-opacity="1"/>
+      <stop offset="0.5" stop-color="#f6c98b" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f6c98b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="foam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1536" height="1024" fill="url(#sky)"/>
+  <circle cx="1120" cy="610" r="260" fill="url(#sun)"/>
+  <circle cx="1120" cy="640" r="54" fill="#fbe7c4"/>
+  <path d="M0 540 L0 700 L1536 700 L1536 540 Q1300 520 1120 560 Q940 600 760 556 Q560 508 380 556 Q180 600 0 540 Z" fill="url(#hill)" opacity="0.9"/>
+  <path d="M0 592 L0 760 L1536 760 L1536 600 Q1360 570 1200 606 Q1040 642 880 602 Q700 560 520 606 Q320 656 0 592 Z" fill="#1b3545" opacity="0.85"/>
+  <rect x="0" y="672" width="1536" height="352" fill="url(#sea)"/>
+  <g opacity="0.32" stroke="#bfe3f2" stroke-width="2" fill="none">
+    <path d="M0 720 Q200 712 400 722 T800 720 T1200 722 T1536 718"/>
+    <path d="M0 760 Q180 752 360 762 T720 760 T1080 762 T1536 758"/>
+    <path d="M0 806 Q220 796 440 808 T880 806 T1320 808 T1536 802"/>
+  </g>
+  <rect x="640" y="690" width="960" height="150" fill="url(#foam)" opacity="0.35" transform="skewX(-8)"/>
+  <path d="M0 880 Q260 840 520 876 Q780 912 1040 870 Q1300 830 1536 868 L1536 1024 L0 1024 Z" fill="url(#sand)"/>
+  <path d="M0 876 Q260 836 520 872 Q780 908 1040 866 Q1300 826 1536 864 L1536 884 Q1300 846 1040 886 Q780 926 520 892 Q260 856 0 896 Z" fill="#f2ead8" opacity="0.75"/>
+  <g fill="#1a2f3d" opacity="0.75">
+    <path d="M1180 866 l10 -36 l10 36 z"/>
+    <path d="M1240 858 l8 -28 l8 28 z"/>
+  </g>
+</svg>

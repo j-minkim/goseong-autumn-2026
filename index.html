@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="2026년 11월 4일부터 6일까지 서울에서 자차로 출발해 동루골막국수, 카페 테일, 라헨느 풀빌라, 북끝서점, 고식당, 노라킴, 백도수산 가리비, 보배진 카츠산도를 숙소 위치에 맞춰 엮은 강원 고성 2박 3일 여행 일정입니다."
+    />
+    <meta
+      name="keywords"
+      content="고성여행,강원고성2박3일,고성여행코스,라헨느풀빌라,동루골막국수,카페테일,북끝서점,고식당,교암해변,노라킴,육림델리카트슨,백도수산가리비,백도해변,보배진카츠산도,천진해변"
+    />
+    <meta name="theme-color" content="#dbe6ea" />
+    <meta
+      property="og:title"
+      content="고성 2박 3일 여행 코스 | 라헨느 풀빌라, 가진, 교암, 백도 일정"
+    />
+    <meta
+      property="og:description"
+      content="지도 이동 경로, 방문자 후기와 장소 사진으로 보는 2026 늦가을 강원 고성 2박 3일 여행"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/goseong-east-sea.svg" />
+    <title>고성 2박 3일 여행 코스 | 라헨느 풀빌라, 가진, 교암, 백도 일정</title>
+
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261102b" />
+  </head>
+  <body class="phase-morning">
+    <a class="skip-link" href="#trip-planner">일정으로 바로가기</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="고성 여행 페이지 맨 위로">
+        <span class="wordmark-mark">G</span>
+        <span>Goseong, by the sea</span>
+      </a>
+      <nav aria-label="주요 탐색">
+        <a href="#trip-planner">일정</a>
+        <a href="#checklist">출발 전 확인</a>
+        <a href="#weather-plan">날씨 대응</a>
+        <a href="#sources">출처</a>
+      </nav>
+      <button class="icon-button theme-toggle" type="button" aria-label="색상 모드 전환">
+        <i class="ph ph-moon" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="assets/goseong-east-sea.svg"
+            alt=""
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+          />
+          <div class="hero-scrim"></div>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">2026. 11. 4 WED - 11. 6 FRI</p>
+          <h1 id="hero-title">고성에서<br /><span>바다 옆, 2박 3일</span></h1>
+          <p class="hero-subtitle">올라가며 막국수, 둘째 날만 교암 나들이, 내려오며 가리비 한 끼.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#trip-planner">
+              일정 열기
+              <i class="ph ph-arrow-down" aria-hidden="true"></i>
+            </a>
+            <button class="button button-secondary hero-play" type="button">
+              <i class="ph ph-play" aria-hidden="true"></i>
+              <span>경로 재생</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-facts" aria-label="여행 요약">
+          <div>
+            <strong>12</strong>
+            <span>장소</span>
+          </div>
+          <div>
+            <strong>3</strong>
+            <span>일</span>
+          </div>
+          <div>
+            <strong>2</strong>
+            <span>박</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro section-shell">
+        <h2>숙소를 기준으로<br />남쪽은 하루만</h2>
+        <p>
+          첫날은 서울에서 올라오며 남쪽에서 점심을 먹고 가진의 카페를 들러 숙소에
+          닿습니다. 둘째 날만 교암으로 나들이하고, 마지막 날은 내려오는 길에 좋아하는
+          음식 하나로 마무리합니다.
+        </p>
+      </section>
+
+      <section id="trip-planner" class="planner section-shell" aria-labelledby="planner-title">
+        <div class="planner-heading">
+          <div>
+            <h2 id="planner-title">시간을 누르면, 지도가 움직입니다</h2>
+            <p>장소를 고르면 실제 위치, 사진, 공개 후기를 한 번에 볼 수 있습니다.</p>
+          </div>
+          <div class="day-switcher" role="tablist" aria-label="여행 날짜 선택">
+            <button
+              class="day-tab is-active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              data-day="1"
+            >
+              11.4 수요일
+            </button>
+            <button
+              class="day-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-day="2"
+            >
+              11.5 목요일
+            </button>
+            <button
+              class="day-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              data-day="3"
+            >
+              11.6 금요일
+            </button>
+          </div>
+        </div>
+
+        <div class="planner-layout">
+          <aside class="timeline-panel" aria-label="시간별 일정">
+            <div class="timeline-progress" aria-hidden="true">
+              <span></span>
+            </div>
+            <div id="timeline" class="timeline"></div>
+          </aside>
+
+          <div class="map-panel">
+            <div class="map-toolbar">
+              <div class="current-stop">
+                <span id="current-time">10:00</span>
+                <strong id="current-place">서울 출발</strong>
+              </div>
+              <button class="route-button" type="button">
+                <i class="ph ph-play" aria-hidden="true"></i>
+                <span>경로 재생</span>
+              </button>
+            </div>
+            <div id="map" role="application" aria-label="고성 여행 이동 경로 지도"></div>
+            <div id="map-status" class="map-status" role="status">
+              <span class="map-skeleton"></span>
+              <span>지도를 불러오는 중입니다</span>
+            </div>
+            <div id="variant-switcher" class="variant-switcher" role="tablist" aria-label="일정 선택" hidden>
+              <span id="variant-label">선택</span>
+            </div>
+            <div class="map-credit">
+              <span>OpenStreetMap 기반</span>
+              <span id="route-summary">첫날 4개 정류장</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="place-story section-shell" aria-live="polite" aria-labelledby="place-name">
+        <div class="place-visual">
+          <img id="place-image" src="" alt="" loading="lazy" />
+          <div class="image-state" hidden>
+            <i class="ph ph-image-broken" aria-hidden="true"></i>
+            <span>장소 이미지를 불러오지 못했습니다</span>
+          </div>
+        </div>
+
+        <div class="place-details">
+          <div class="place-meta">
+            <span id="place-type">출발</span>
+            <span id="place-duration">약 3시간 이동</span>
+          </div>
+          <h2 id="place-name">서울 출발</h2>
+          <p id="place-note" class="place-note"></p>
+
+          <div class="info-grid">
+            <div>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
+              <span>주소</span>
+              <strong id="place-address"></strong>
+            </div>
+            <div>
+              <i class="ph ph-clock" aria-hidden="true"></i>
+              <span>운영 메모</span>
+              <strong id="place-hours"></strong>
+            </div>
+          </div>
+
+          <blockquote>
+            <i class="ph ph-quotes" aria-hidden="true"></i>
+            <p id="review-text"></p>
+            <footer>
+              <span id="review-source"></span>
+              <a id="review-link" href="#" target="_blank" rel="noreferrer">
+                원문 보기
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+              </a>
+            </footer>
+          </blockquote>
+
+          <div class="place-actions">
+            <a id="naver-link" class="button button-primary" href="#" target="_blank" rel="noreferrer">
+              <i class="ph ph-navigation-arrow" aria-hidden="true"></i>
+              네이버 지도
+            </a>
+            <a id="google-link" class="button button-secondary" href="#" target="_blank" rel="noreferrer">
+              사진과 리뷰 더 보기
+            </a>
+          </div>
+          <p id="media-disclaimer" class="media-disclaimer">
+            사진과 후기 요약은 연결된 공개 페이지를 바탕으로 표시합니다. 최신 운영 여부는 방문
+            직전 공식 채널에서 다시 확인하세요.
+          </p>
+        </div>
+      </section>
+
+      <section id="checklist" class="checklist section-shell" aria-labelledby="checklist-title">
+        <div class="checklist-heading">
+          <h2 id="checklist-title">출발 전에 전화 한 통씩</h2>
+          <p>
+            아래 시각은 예약용 확정 시간이 아니라 여유 있게 움직이기 위한 초안입니다.
+            구간별 운전 시간은 지도 경로로 다시 확인하세요.
+          </p>
+        </div>
+        <div class="checklist-grid">
+          <article class="check-card">
+            <i class="ph ph-house-line" aria-hidden="true"></i>
+            <strong>라헨느 J동 입실·바비큐</strong>
+            <span>공개 안내는 입실 15시, 퇴실 11시. 예약 문자 조건이 우선이고, 바비큐는 이용 조건과 신청 여부를 먼저 확인합니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-coffee" aria-hidden="true"></i>
+            <strong>카페 테일 수·목 휴무</strong>
+            <span>네이버 기준 수요일과 목요일이 정기휴무라 첫날 방문이 어렵습니다. 금요일 체크아웃 직후 들르는 안을 마지막 날 경로에 넣었으니 영업일을 다시 확인하세요.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-book-open" aria-hidden="true"></i>
+            <strong>북끝서점 영업 공지</strong>
+            <span>목요일 방문 전 SNS 영업 공지를 확인하고, 고식당 대기에 따라 서점과 순서를 바꿔도 됩니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-fork-knife" aria-hidden="true"></i>
+            <strong>육림델리카트슨 목요일 저녁</strong>
+            <span>꼭 가고 싶다면 목요일 저녁 영업을 확인해 노라킴 이후 바로 들르고 귀가합니다. 숙소에 들어갔다 다시 나오는 왕복은 피합니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-phone" aria-hidden="true"></i>
+            <strong>백도수산 재고와 식사 시간</strong>
+            <span>체크아웃 전에 전화해 가리비 재고와 식사 가능 시간을 확인합니다. 점심 운영 안내가 엇갈려 체크아웃을 앞당기거나 방문을 늦출 수 있습니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-storefront" aria-hidden="true"></i>
+            <strong>보배진 카츠산도 판매 여부</strong>
+            <span>금요일 12시 오픈, 수·목 휴무. 현재는 예약제 돈카츠 코스 안에 카츠산도가 포함되고 단품은 여름 팝업이었으니 판매 여부를 확인하고, 아니면 A안 가리비로 돌립니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-video-camera" aria-hidden="true"></i>
+            <strong>수요일 저녁 온라인 미팅</strong>
+            <span>4일 저녁 미팅이 그대로 있다면 숙소에서 저녁을 해결하는 첫날 구성이 특히 편합니다. 숙소 와이파이 상태를 체크인 때 확인합니다.</span>
+          </article>
+          <article class="check-card">
+            <i class="ph ph-clock" aria-hidden="true"></i>
+            <strong>노라킴·고식당 영업 시간</strong>
+            <span>노라킴은 화·수 휴무라 목요일은 영업하고, 고식당은 15시부터 17시까지 브레이크라 점심은 13시 전에 들어갑니다.</span>
+          </article>
+          <article class="check-card is-excluded">
+            <i class="ph ph-prohibit" aria-hidden="true"></i>
+            <strong>썬크림</strong>
+            <span>11월 2일부터 10일까지 젤라또 대회 참가로 임시휴무 공지가 있어 일정에서 제외했습니다.</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="weather-plan" class="weather-plan section-shell" aria-labelledby="weather-title">
+        <div class="weather-heading">
+          <h2 id="weather-title">11월 바닷바람까지 일정에 넣었습니다</h2>
+          <p>해변 산책은 날씨에 따라 줄이거나 생략하고, 숙소의 수영·스파 시간을 남겨둡니다.</p>
+        </div>
+        <div class="weather-grid">
+          <article class="weather-card wind-card">
+            <div class="weather-icon">
+              <i class="ph ph-wind" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3>바람이 세다면</h3>
+              <p>교암해변과 백도·천진 해변 산책은 생략하고, 서점과 카페 체류를 늘린 뒤 일찍 숙소로 돌아옵니다.</p>
+            </div>
+          </article>
+          <article class="weather-card rain-card">
+            <div class="weather-icon">
+              <i class="ph ph-cloud-rain" aria-hidden="true"></i>
+            </div>
+            <div>
+              <h3>도착이 늦어진다면</h3>
+              <p>첫날 테일은 포장하거나 다음 날로 넘기고, 점심과 체크인만 지켜도 충분합니다.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-route section-shell">
+        <div class="route-copy">
+          <p>2박 3일의 리듬</p>
+          <h2>북쪽 숙소에서<br />남쪽은 하루만</h2>
+          <span>숙소는 두 밤 모두 라헨느 풀빌라 J동</span>
+        </div>
+        <div class="route-days" aria-label="3일 전체 동선">
+          <article class="route-day">
+            <div>
+              <strong>11월 4일 수요일</strong>
+              <span>이동, 막국수, 테일, 숙소</span>
+            </div>
+            <p>서울 → 동루골막국수 → 카페 테일(수요일 휴무 확인) → 라헨느 J동 (저녁은 숙소에서)</p>
+          </article>
+          <article class="route-day">
+            <div>
+              <strong>11월 5일 목요일</strong>
+              <span>교암 나들이와 숙소 휴식</span>
+            </div>
+            <p>
+              숙소 → 북끝서점 → 고식당 → 교암해변 산책 → 노라킴 → 숙소
+              (육림델리카트슨은 저녁 선택지)
+            </p>
+          </article>
+          <article class="route-day">
+            <div>
+              <strong>11월 6일 금요일</strong>
+              <span>체크아웃과 한 끼로 마무리</span>
+            </div>
+            <p>
+              A안: 숙소 → (테일) → 백도수산 가리비 → 백도해변 → 서울<br />
+              B안: 숙소 → (테일) → 보배진 → 천진해변 → 서울
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sources" class="sources section-shell" aria-labelledby="sources-title">
+        <h2 id="sources-title">정보와 이미지 출처</h2>
+        <p>
+          운영 정보와 후기 링크는 2026년 11월 2일 확인 기준입니다. 외부 이미지의 권리는 각
+          원저작자와 플랫폼에 있습니다.
+        </p>
+        <div id="source-list" class="source-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Goseong, by the sea</strong>
+        <span>2026년 11월 4일-6일</span>
+      </div>
+      <a href="#top">맨 위로 <i class="ph ph-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+
+    <noscript>
+      <div class="noscript-message">
+        이 페이지의 지도와 장소 전환 기능을 보려면 JavaScript를 켜주세요.
+      </div>
+    </noscript>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js?v=20261102"></script>
+  </body>
+</html>
