@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"chk(){ printf \\\"%s | \\\" \\\"$1\\\"; curl -sI -m 20 -A \\\"Mozilla/5.0\\\" \\\"$2\\\" | grep -iE '^(HTTP|content-type)' | tr -d '\\\\r' | paste -sd' ' ; }\\nchk 북끝서점 \\\"https://search.pstatic.net/common/?a...",
+  "error": "Exit code 1\n북끝서점 | usage: paste [-s] [-d delimiters] file ...\n고식당 | usage: paste [-s] [-d delimiters] file ...\n노라킴 | usage: paste [-s] [-d delimiters] file ...\n육림 | usage: paste [-s] [-d delimiters] file ...\n천학정 | usage: paste [-s] [-d delimiters] file ...\n능파대 | usage: paste [-s] [-d delimiters] file ...\n백섬 | usage: paste [-s] [-d delimiters] file ...\n송지호타워 | usage: paste [-s] [-d delimiters] file ...\n바다하늘길 | usage: paste [-s] [-d delimiters] file ...\n왕곡마을 | usage: paste [-s] [-d delimiters] fil...",
+  "timestamp": "2026-11-02T15:31:32.125Z",
+  "retry_count": 1
+}
