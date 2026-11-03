@@ -1602,3 +1602,107 @@ blockquote a {
     padding: 10px 13px;
   }
 }
+
+/* Phone links and directory */
+.phone-link {
+  color: var(--accent-strong);
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent-strong) 40%, transparent);
+  text-underline-offset: 3px;
+}
+
+.phone-link[hidden] {
+  display: none;
+}
+
+.check-card a {
+  color: var(--accent-strong);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.phone-directory {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.phone-directory a {
+  background: color-mix(in srgb, var(--surface-strong) 80%, transparent);
+  display: grid;
+  gap: 4px;
+  padding: 16px 18px;
+  transition: background 180ms ease;
+}
+
+.phone-directory a:hover {
+  background: var(--surface-strong);
+}
+
+.phone-directory a:first-child {
+  border-radius: var(--radius-card) 0 0 0;
+}
+
+.phone-directory a:nth-child(4) {
+  border-radius: 0 var(--radius-card) 0 0;
+}
+
+.phone-directory a:nth-child(5) {
+  border-radius: 0 0 0 var(--radius-card);
+}
+
+.phone-directory a:last-child {
+  border-radius: 0 0 var(--radius-card) 0;
+}
+
+.phone-directory strong {
+  font-size: 13px;
+  letter-spacing: -0.02em;
+}
+
+.phone-directory span {
+  color: var(--accent-strong);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 760;
+}
+
+.phone-directory small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@media (max-width: 980px) {
+  .phone-directory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .phone-directory a:first-child,
+  .phone-directory a:nth-child(4),
+  .phone-directory a:nth-child(5),
+  .phone-directory a:last-child {
+    border-radius: 0;
+  }
+
+  .phone-directory a:first-child {
+    border-radius: var(--radius-card) 0 0 0;
+  }
+
+  .phone-directory a:nth-child(2) {
+    border-radius: 0 var(--radius-card) 0 0;
+  }
+
+  .phone-directory a:nth-last-child(2) {
+    border-radius: 0 0 0 var(--radius-card);
+  }
+
+  .phone-directory a:last-child {
+    border-radius: 0 0 var(--radius-card) 0;
+  }
+}

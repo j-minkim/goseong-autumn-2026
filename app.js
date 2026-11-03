@@ -7,14 +7,14 @@ const seoulStart = {
   end: "출발",
   name: "서울 출발",
   short: "자차로 고성까지",
-  travelAfter: "토성면까지 약 2시간 45분, 정체 시 3시간 30분 이상",
+  travelAfter: "토성면까지 2시간 45분 (200km, 무정체 기준), 정체 시 3시간 30분 이상",
   type: "출발",
   duration: "약 3시간 이동",
   phase: "morning",
   coords: [37.5665, 126.978],
   address: "서울 → 서울양양고속도로 → 고성군 토성면",
   hours: "첫날은 예약 시간을 촘촘하게 잡지 않습니다. 휴게소도 편하게 들릅니다.",
-  note: "13시 도착은 목표로 두되, 실시간 경로를 확인한 예상은 아닙니다. 첫 식사는 13시에서 14시 사이로 여유 있게 잡습니다.",
+  note: "구간 시간은 OpenStreetMap 경로(OSRM) 무정체 기준 실측값이라 실제로는 휴게소와 정체가 더해집니다. 첫 식사는 13시에서 14시 사이로 여유 있게 잡고, 가는 길 휴게소는 서울양양고속도로 내린천휴게소(동홍천 지나 약 1시간 반 지점)가 무난합니다.",
   image: MOOD_IMAGE,
   review:
     "서울에서 고성 토성면까지는 약 200km로, 정체가 없으면 2시간 40분 안팎이고 주말 낮 출발은 3시간 30분을 넘기는 사례가 많습니다.",
@@ -23,6 +23,8 @@ const seoulStart = {
 };
 
 const lahene = {
+  naver: "accommodation/36651683",
+  phone: "010-8644-3442",
   coords: [38.3595154, 128.5071207],
   address: "강원 고성군 죽왕면 가진해변길 229 (공현진리 431-38)",
   image: "assets/lahene-j.jpg",
@@ -48,16 +50,18 @@ const day1Stops = [
   seoulStart,
   {
     id: "dongrugol",
+    naver: "restaurant/15070351",
+    phone: "033-632-4328",
     time: "13:00",
     end: "13:50",
     name: "동루골막국수",
     short: "올라가는 길에 점심",
-    travelAfter: "청간정까지 약 10분",
+    travelAfter: "청간정까지 8분 (4.9km)",
     type: "막국수",
     duration: "50분",
     phase: "afternoon",
     coords: [38.254887, 128.5095382],
-    address: "강원 고성군 토성면 성대로 188 (성대리 526-1) · 033-632-4328",
+    address: "강원 고성군 토성면 성대로 188 (성대리 526-1)",
     hours: `10:00-17:00, 매주 화요일 휴무 (${CHECK_DATE}) — 수요일 영업`,
     note: "숙소까지 바로 올라갔다가 다시 내려오지 않도록 남쪽에서 먼저 식사합니다. 본점은 성대로에 있고 2호점과 속초점이 따로 있으니 내비 검색 때 본점을 고릅니다.",
     image: "assets/dongrugol.jpg",
@@ -69,10 +73,11 @@ const day1Stops = [
   {
     ...cheongganjeong,
     id: "cheongganjeong-day1",
+    naver: "place/13491372",
     time: "14:00",
     end: "14:15",
     short: "관동팔경 정자에서 바다 한 번",
-    travelAfter: "토성당까지 약 3분",
+    travelAfter: "토성당까지 3분 (1.3km)",
     type: "전망",
     duration: "15분",
     phase: "afternoon",
@@ -80,16 +85,18 @@ const day1Stops = [
   },
   {
     id: "toseongdang",
+    naver: "restaurant/1939232628",
+    phone: "070-4580-7114",
     time: "14:20",
     end: "14:40",
     name: "스튜디오 토성당",
     short: "에그타르트 포장",
-    travelAfter: "고비치5311까지 약 10분",
+    travelAfter: "고비치5311까지 7분 (5.5km)",
     type: "디저트 · 포장",
     duration: "20분",
     phase: "afternoon",
     coords: [38.2552582, 128.5610807],
-    address: "강원 고성군 토성면 토성로 111-5 · 070-4580-7114",
+    address: "강원 고성군 토성면 토성로 111-5",
     hours: `매일 11:00-16:00, 휴무 없음 (${CHECK_DATE}) — 오후 품절 잦아 전화 예약 권장`,
     note: "테일의 옥수수 에그타르트 대신 고르는 자리입니다. 오후에 품절되는 날이 많다고 하니 점심 먹기 전에 전화해 남겨 달라고 하는 편이 안전합니다. 숙소 저녁 디저트로 챙깁니다.",
     image: "assets/toseongdang.jpg",
@@ -100,16 +107,18 @@ const day1Stops = [
   },
   {
     id: "gobeach5311",
+    naver: "restaurant/311710132",
+    phone: "0507-1466-5311",
     time: "14:50",
     end: "15:40",
     name: "고비치5311",
     short: "교암해변 루프탑에서 커피",
-    travelAfter: "숙소까지 약 15분",
+    travelAfter: "숙소까지 10분 (8.3km)",
     type: "오션뷰 카페",
     duration: "50분",
     phase: "afternoon",
     coords: [38.2963908, 128.5476367],
-    address: "강원 고성군 죽왕면 괘진길 53-11 (1~3층 루프탑) · 0507-1466-5311",
+    address: "강원 고성군 죽왕면 괘진길 53-11 (1~3층 루프탑)",
     hours: `월-금 10:00-17:30, 토·일 09:40-18:00 (${CHECK_DATE}) — 수요일 영업`,
     note: "테일이 수·목 휴무라 첫날 커피는 여기서 마십니다. 교암해변 바로 앞 화이트톤 3층 건물이고, 옆집 온더버튼은 수요일 휴무입니다. 컨디션에 따라 포장해서 숙소로 가도 됩니다.",
     image: "assets/gobeach5311.jpg",
@@ -121,11 +130,13 @@ const day1Stops = [
   {
     ...lahene,
     id: "lahene-day1",
+    naver: "accommodation/36651683",
+    phone: "010-8644-3442",
     time: "16:00",
     end: "체크인",
     name: "라헨느 풀빌라 J동",
     short: "체크인, 바다, 스파",
-    travelAfter: "샘이네횟집까지 약 3분",
+    travelAfter: "샘이네횟집까지 2분 (1.2km)",
     type: "숙소",
     duration: "첫째 밤",
     phase: "evening",
@@ -134,6 +145,8 @@ const day1Stops = [
   },
   {
     id: "saemine",
+    naver: "restaurant/1406051653",
+    phone: "0507-1497-6302",
     time: "17:30",
     end: "18:00",
     name: "샘이네횟집",
@@ -142,7 +155,7 @@ const day1Stops = [
     duration: "포장 30분",
     phase: "evening",
     coords: [38.3673459, 128.5103638],
-    address: "강원 고성군 죽왕면 가진해변길 123 1호 (가진항) · 0507-1497-6302",
+    address: "강원 고성군 죽왕면 가진해변길 123 1호 (가진항)",
     hours: `09:30-21:00, 주문 마감 20:00, 매달 첫째·셋째 월요일 휴무 (${CHECK_DATE})`,
     note: "숙소에서 1km라 포장해서 돌아와 저녁을 먹습니다. 전화로 미리 주문하면 대기가 짧고, 늦은 저녁이 되면 공현진회센터의 안가네가족(22시까지)이 대안입니다.",
     image: "assets/saemine.jpg",
@@ -156,6 +169,7 @@ const day1Stops = [
 const day2Core = [
   {
     id: "bookkkeut",
+    naver: "place/1229121932",
     time: "11:00",
     end: "11:40",
     name: "북끝서점",
@@ -167,7 +181,7 @@ const day2Core = [
     coords: [38.292056, 128.5454957],
     address: "강원 고성군 토성면 교암길 78-1 (교암리 2-5)",
     hours: `화-토 11:00-16:00, 일·월 정기휴무 (${CHECK_DATE}) — 목요일 영업`,
-    note: "아침은 숙소에서 바다를 보며 느긋하게 보내고 10시 30분쯤 출발합니다. 고식당 대기에 따라 서점과 순서를 바꿔도 됩니다. 서점 앞 교차로에서 교암교회 방면으로 우회전하면 주차할 수 있다는 안내가 있고, 실내화로 갈아 신고 들어갑니다.",
+    note: "아침은 숙소에서 바다를 보며 느긋하게 보내고 10시 45분쯤 출발합니다(숙소에서 10분, 8.4km). 고식당 대기에 따라 서점과 순서를 바꿔도 됩니다. 서점 앞 교차로에서 교암교회 방면으로 우회전하면 주차할 수 있다는 안내가 있고, 실내화로 갈아 신고 들어갑니다.",
     image: "assets/bookkkeut.jpg",
     review:
       "교암해변 옆 어촌마을의 작은 독립서점으로 소설, 시, 에세이, 그림책을 책방지기가 큐레이션하고 쪽지 추천을 곳곳에 붙여 두었습니다. 조용하고 아늑해 카페 같은 분위기라는 후기가 많습니다.",
@@ -176,6 +190,7 @@ const day2Core = [
   },
   {
     id: "cheonhakjeong",
+    naver: "place/19493918",
     time: "11:40",
     end: "11:55",
     name: "천학정",
@@ -196,6 +211,9 @@ const day2Core = [
   },
   {
     id: "go-restaurant",
+    naver: "restaurant/1942643290",
+    phone: "0507-1335-7859",
+    bookingUrl: "https://booking.naver.com/booking/6/bizes/1717020",
     time: "12:00",
     end: "13:00",
     name: "고성식해물철판구이 (구 고식당)",
@@ -205,7 +223,7 @@ const day2Core = [
     duration: "1시간",
     phase: "afternoon",
     coords: [38.2923182, 128.5454743],
-    address: "강원 고성군 토성면 교암길 80 2층 (교암리 3-4) · 0507-1335-7859",
+    address: "강원 고성군 토성면 교암길 80 2층 (교암리 3-4)",
     hours: `11:00-20:00, 브레이크 15:00-17:00, 라스트오더 19:10, 화요일 휴무 (${CHECK_DATE})`,
     note: "상호가 고식당에서 고성식해물철판구이로 바뀌었으니 내비는 새 이름으로 검색합니다. 붉은 벽돌 건물 2층이고 입구는 건물 뒤편입니다. 네이버 예약이 열려 있고 현장은 테이블링 대기이니 예약해 두면 서점 일정이 편합니다. 1층 주차장은 옆 가게 전용이라 건물 앞이나 골목에 댑니다.",
     image: "assets/go-restaurant.jpg",
@@ -216,11 +234,12 @@ const day2Core = [
   },
   {
     id: "gyoam-beach",
+    naver: "attraction/13491638",
     time: "13:00",
     end: "13:20",
     name: "교암해변 산책",
     short: "날씨가 좋으면 천천히",
-    travelAfter: "능파대까지 약 4분",
+    travelAfter: "능파대까지 1분 (600m)",
     type: "해변 산책",
     duration: "20분, 바람 세면 생략",
     phase: "afternoon",
@@ -237,11 +256,12 @@ const day2Core = [
   },
   {
     id: "neungpadae",
+    naver: "place/15150899",
     time: "13:25",
     end: "13:50",
     name: "능파대",
     short: "타포니 기암 데크길",
-    travelAfter: "노라킴까지 약 5분",
+    travelAfter: "노라킴까지 4분 (1.5km)",
     type: "지질공원",
     duration: "25분",
     phase: "afternoon",
@@ -257,16 +277,18 @@ const day2Core = [
   },
   {
     id: "norakim",
+    naver: "restaurant/1482818703",
+    phone: "0507-1460-2382",
     time: "14:00",
     end: "15:00",
     name: "노라킴",
     short: "자작도해변 앞 조용한 카페",
-    travelAfter: "송지호 관망타워까지 약 7분",
+    travelAfter: "송지호 관망타워까지 7분 (4.7km)",
     type: "카페",
     duration: "1시간",
     phase: "afternoon",
     coords: [38.3064576, 128.5419643],
-    address: "강원 고성군 죽왕면 자작도선사길 130-2 (문암진리 253-1) · 0507-1460-2382",
+    address: "강원 고성군 죽왕면 자작도선사길 130-2 (문암진리 253-1)",
     hours: `목-월 10:00-18:00, 매주 화·수 정기휴무 (${CHECK_DATE}) — 목요일 영업`,
     note: "남쪽 교암에서 숙소 방향으로 돌아오며 쉬는 코스입니다. 자작도해변 건너편이라 ㄱ자 통창으로 바다와 논이 함께 보이고, 주차는 맞은편 공터를 씁니다. 붐비면 능파대 옆 온더버튼(목 10:30-18:00)으로 바꿉니다.",
     image: "assets/norakim.jpg",
@@ -277,16 +299,18 @@ const day2Core = [
   },
   {
     id: "songjiho-tower",
+    naver: "place/20027267",
+    phone: "033-680-3556",
     time: "15:10",
     end: "15:50",
     name: "송지호 철새관망타워",
     short: "호수와 바다를 한눈에",
-    travelAfter: "숙소까지 약 7분",
+    travelAfter: "숙소까지 3분 (2.9km)",
     type: "전망대",
     duration: "40분",
     phase: "afternoon",
     coords: [38.3362709, 128.5176535],
-    address: "강원 고성군 죽왕면 동해대로 6021 · 033-680-3556",
+    address: "강원 고성군 죽왕면 동해대로 6021",
     hours: `동절기 09:00-17:30, 매표 마감 16:40, 무료 주차 (${CHECK_DATE})`,
     note: "5층 전망대에서 송지호, 죽도, 동해가 한 번에 보이고 11월부터 고니 같은 겨울 철새가 들어오기 시작합니다. 4층 카페(11:00-17:00)는 노라킴을 건너뛰었을 때의 대안입니다. 9월에 개장한 송지호 바다하늘길 스카이워크는 11월 운영 주체가 미공지라 가려면 관광과에 먼저 전화합니다.",
     image: "assets/songjiho-tower.jpg",
@@ -299,16 +323,18 @@ const day2Core = [
 
 const yooklim = {
   id: "yooklim",
+    naver: "restaurant/2060215047",
+    phone: "0507-1329-5027",
   time: "16:00",
   end: "17:00",
   name: "육림델리카트슨",
   short: "목요일 저녁 외식 선택지",
-  travelAfter: "숙소까지 약 11분",
+  travelAfter: "숙소까지 9분 (7.8km)",
   type: "수제 소시지",
   duration: "1시간, 대기 포함",
   phase: "evening",
   coords: [38.3025818, 128.5451698],
-  address: "강원 고성군 죽왕면 백도해변길 90 1층 (문암진리 82-5) · 0507-1329-5027",
+  address: "강원 고성군 죽왕면 백도해변길 90 1층 (문암진리 82-5)",
   hours: `11:00-21:00, 브레이크 14:30-16:00, 라스트오더 20:30, 수요일 휴무 (${CHECK_DATE}) — 목요일 저녁 16:00부터`,
   note: "송지호에서 남쪽으로 10분 되돌아가는 구성입니다. 오후 대기 등록은 15:30부터 현장 태블릿에서만 받고 원격 줄서기는 안 되니, 송지호를 짧게 보고 15:30에 맞춰 내려갑니다. 품절이 잦으면 같은 골목의 백도벅스 가리비수산(목 14:00-21:00, 평점 4.91)으로 바로 바꿉니다.",
   image: "assets/yooklim.jpg",
@@ -337,11 +363,13 @@ function laheneReturn(time, note) {
 const day3Checkout = {
   ...lahene,
   id: "lahene-checkout",
+    naver: "accommodation/36651683",
+    phone: "010-8644-3442",
   time: "~11:00",
   end: "체크아웃",
   name: "라헨느 풀빌라 J동",
   short: "아침까지 쉬고 체크아웃",
-  travelAfter: "테일까지 약 5분",
+  travelAfter: "테일까지 3분 (1.8km)",
   type: "숙소",
   duration: "퇴실 11:00",
   phase: "morning",
@@ -351,16 +379,18 @@ const day3Checkout = {
 
 const tailDay3 = {
   id: "tail-day3",
+    naver: "restaurant/1351634164",
+    phone: "070-7585-8080",
   time: "11:10",
   end: "11:50",
   name: "카페 테일",
   short: "금요일에만 여는 테일",
-  travelAfter: "백도수산까지 약 12분",
+  travelAfter: "백도수산까지 13분 (10.2km)",
   type: "카페",
   duration: "40분, 생략 가능",
   phase: "morning",
   coords: [38.3728017, 128.5087356],
-  address: "강원 고성군 죽왕면 가진길 40-5 (가진리 6) · 070-7585-8080",
+  address: "강원 고성군 죽왕면 가진길 40-5 (가진리 6)",
   hours: `10:00-18:00, 수·목 정기휴무 (${CHECK_DATE}) — 여행 중 금요일만 영업`,
   note: "수·목 휴무라 첫날에 못 가는 대신 체크아웃 직후 북쪽으로 5분 올라가 커피와 옥수수 에그타르트를 챙깁니다. 점심 시간이 빠듯하면 포장만 하거나 생략합니다. 주차는 가진리 마을주차장입니다.",
   image: "assets/tail-cafe.jpg",
@@ -422,7 +452,7 @@ const tripDays = {
         summary: "둘째 날 9개 정류장",
         stops: [
           ...day2Core.slice(0, -1),
-          { ...day2Core[day2Core.length - 1], end: "15:30", duration: "20분", travelAfter: "육림까지 약 10분 (남쪽으로 되돌아감)" },
+          { ...day2Core[day2Core.length - 1], end: "15:30", duration: "20분", travelAfter: "육림까지 7분 (4.9km, 남쪽으로 되돌아감)" },
           yooklim,
           laheneReturn(
             "17:30",
@@ -444,6 +474,8 @@ const tripDays = {
           tailDay3,
           {
             id: "baekdo-susan",
+    naver: "restaurant/1506231167",
+    phone: "033-633-9555",
             time: "12:00",
             end: "13:00",
             name: "백도수산 가리비 직판장",
@@ -453,7 +485,7 @@ const tripDays = {
             duration: "1시간",
             phase: "afternoon",
             coords: [38.3022337, 128.548811],
-            address: "강원 고성군 죽왕면 문암항길 92 1층 (문암진리 산1-14) · 033-633-9555",
+            address: "강원 고성군 죽왕면 문암항길 92 1층 (문암진리 산1-14)",
             hours: `매일 09:00-16:00, 정기휴무 없음 (${CHECK_DATE}). 물량 소진 시 조기 마감, 12-13시 점심 휴게는 블로그에만 있는 미확인 정보`,
             note: "체크아웃 전에 전화로 재고와 식사 가능 시간을 확인합니다. 메뉴는 가리비뿐이고 초장은 별도, 숯과 연탄불에 직접 굽습니다. 11월에도 비닐하우스 천막 안에서 먹을 수 있고 버터나 컵라면은 챙겨 갑니다. 주말에는 1시간 반 대기 후기가 있지만 평일 오후는 짧았다는 10월 후기가 있습니다.",
             image: "assets/baekdo-susan.jpg",
@@ -464,11 +496,12 @@ const tripDays = {
           },
           {
             id: "baekdo-beach",
+    naver: "attraction/13491937",
             time: "13:00",
             end: "13:30",
             name: "백도해변 산책",
             short: "짧게 걷고 출발",
-            travelAfter: "서울까지 약 3시간",
+            travelAfter: "서울까지 2시간 50분 (207km, 무정체 기준)",
             type: "해변 산책",
             duration: "30분",
             phase: "afternoon",
@@ -491,9 +524,10 @@ const tripDays = {
         summary: "마지막 날 5개 정류장",
         stops: [
           day3Checkout,
-          { ...tailDay3, travelAfter: "천진까지 약 25분" },
+          { ...tailDay3, travelAfter: "세컨드바이트까지 18분 (15.1km)" },
           {
             id: "secondbite",
+    naver: "restaurant/1621171959",
             time: "12:15",
             end: "13:15",
             name: "세컨드바이트",
@@ -514,11 +548,12 @@ const tripDays = {
           },
           {
             id: "cheonjin-beach",
+    naver: "attraction/13491824",
             time: "13:15",
             end: "13:45",
             name: "천진해변 산책",
             short: "짧게 걷고 출발",
-            travelAfter: "서울까지 약 2시간 45분",
+            travelAfter: "서울까지 2시간 45분 (202km, 무정체 기준)",
             type: "해변 산책",
             duration: "30분",
             phase: "afternoon",
@@ -538,6 +573,17 @@ const tripDays = {
     ],
   },
 };
+
+const phoneDirectory = [
+  ["라헨느 풀빌라 J동", "010-8644-3442", "입실·바비큐 조건"],
+  ["스튜디오 토성당", "070-4580-7114", "에그타르트 예약"],
+  ["고성식해물철판구이", "0507-1335-7859", "점심 예약 확인"],
+  ["샘이네횟집", "0507-1497-6302", "회 포장 선주문"],
+  ["백도수산", "033-633-9555", "가리비 재고"],
+  ["고성군 관광과", "033-680-3356", "송지호 바다하늘길 운영"],
+  ["카페 테일", "070-7585-8080", "금요일 영업 확인"],
+  ["육림델리카트슨", "0507-1329-5027", "품절 여부"],
+];
 
 const sourceEntries = [
   ["동루골막국수 네이버 플레이스", "https://m.place.naver.com/restaurant/15070351/home"],
@@ -769,10 +815,21 @@ function updatePlacePanel(stop) {
     ? "이 구간의 이미지는 분위기 연출용 일러스트입니다. 이동 시간은 지도 경로로 다시 확인하세요."
     : "사진과 후기 요약은 연결된 공개 페이지를 바탕으로 표시합니다. 최신 운영 여부는 방문 직전 공식 채널에서 다시 확인하세요.";
 
-  const searchName = stop.name.replace(/ (산책|직판장)$/, "");
-  document.querySelector("#naver-link").href = `https://map.naver.com/p/search/${encodeURIComponent(
-    `고성 ${searchName}`,
-  )}`;
+  const searchName = stop.name.replace(/ (산책|직판장)$/, "").replace(/ \(구 .*\)$/, "");
+  document.querySelector("#naver-link").href = stop.naver
+    ? `https://map.naver.com/p/entry/place/${stop.naver.split("/")[1]}`
+    : `https://map.naver.com/p/search/${encodeURIComponent(`고성 ${searchName}`)}`;
+
+  const phoneLink = document.querySelector("#place-phone");
+  phoneLink.hidden = !stop.phone;
+  if (stop.phone) {
+    phoneLink.href = `tel:${stop.phone.replace(/-/g, "")}`;
+    phoneLink.textContent = stop.phone;
+  }
+
+  const bookingLink = document.querySelector("#booking-link");
+  bookingLink.hidden = !stop.bookingUrl;
+  if (stop.bookingUrl) bookingLink.href = stop.bookingUrl;
   document.querySelector("#google-link").href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${searchName} ${stop.address}`,
   )}`;
@@ -977,6 +1034,16 @@ function toggleTheme() {
   selectStop(state.selectedIndex);
 }
 
+function renderPhoneDirectory() {
+  const list = document.querySelector("#phone-directory");
+  phoneDirectory.forEach(([name, phone, why]) => {
+    const anchor = document.createElement("a");
+    anchor.href = `tel:${phone.replace(/-/g, "")}`;
+    anchor.innerHTML = `<strong>${name}</strong><span>${phone}</span><small>${why}</small>`;
+    list.appendChild(anchor);
+  });
+}
+
 function renderSources() {
   const list = document.querySelector("#source-list");
   sourceEntries.forEach(([label, url]) => {
@@ -1011,5 +1078,6 @@ heroPlayButton.addEventListener("click", () => {
 });
 
 initializeTheme();
+renderPhoneDirectory();
 renderSources();
 refreshDayView();

@@ -21,7 +21,11 @@
       content="지도 이동 경로, 방문자 후기와 장소 사진으로 보는 2026 늦가을 강원 고성 2박 3일 여행"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/goseong-east-sea.svg" />
+    <meta property="og:url" content="https://goseong-autumn-2026.vercel.app/" />
+    <meta property="og:image" content="https://goseong-autumn-2026.vercel.app/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>고성 2박 3일 여행 코스 | 라헨느 풀빌라, 가진, 교암, 백도 일정</title>
 
     <link rel="preconnect" href="https://unpkg.com" />
@@ -36,7 +40,7 @@
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
-    <link rel="stylesheet" href="styles.css?v=20261103" />
+    <link rel="stylesheet" href="styles.css?v=20261103b" />
   </head>
   <body class="phase-morning">
     <a class="skip-link" href="#trip-planner">일정으로 바로가기</a>
@@ -205,6 +209,7 @@
               <i class="ph ph-map-pin" aria-hidden="true"></i>
               <span>주소</span>
               <strong id="place-address"></strong>
+              <a id="place-phone" class="phone-link" href="#" hidden></a>
             </div>
             <div>
               <i class="ph ph-clock" aria-hidden="true"></i>
@@ -230,6 +235,10 @@
               <i class="ph ph-navigation-arrow" aria-hidden="true"></i>
               네이버 지도
             </a>
+            <a id="booking-link" class="button button-secondary" href="#" target="_blank" rel="noreferrer" hidden>
+              <i class="ph ph-calendar-check" aria-hidden="true"></i>
+              네이버 예약
+            </a>
             <a id="google-link" class="button button-secondary" href="#" target="_blank" rel="noreferrer">
               사진과 리뷰 더 보기
             </a>
@@ -246,9 +255,10 @@
           <h2 id="checklist-title">출발 전에 전화 한 통씩</h2>
           <p>
             아래 시각은 예약용 확정 시간이 아니라 여유 있게 움직이기 위한 초안입니다.
-            구간별 운전 시간은 지도 경로로 다시 확인하세요.
+            구간별 운전 시간은 OpenStreetMap 경로 기준 무정체 실측값이라 정체와 휴게소 시간은 따로 더하세요.
           </p>
         </div>
+        <div id="phone-directory" class="phone-directory" aria-label="전화번호 모음"></div>
         <div class="checklist-grid">
           <article class="check-card">
             <i class="ph ph-house-line" aria-hidden="true"></i>
@@ -258,12 +268,12 @@
           <article class="check-card">
             <i class="ph ph-coffee" aria-hidden="true"></i>
             <strong>카페 테일은 금요일에</strong>
-            <span>수·목 정기휴무라 첫날 커피는 고비치5311, 에그타르트는 스튜디오 토성당(품절 잦아 전화 예약)으로 바꿨습니다. 테일은 금요일 체크아웃 직후에 들릅니다.</span>
+            <span>수·목 정기휴무라 첫날 커피는 고비치5311, 에그타르트는 스튜디오 토성당(품절 잦아 <a href="tel:07045807114">전화 예약</a>)으로 바꿨습니다. 테일은 금요일 체크아웃 직후에 들릅니다.</span>
           </article>
           <article class="check-card">
             <i class="ph ph-book-open" aria-hidden="true"></i>
             <strong>북끝서점·철판구이 예약</strong>
-            <span>서점은 목요일 11시 오픈. 고식당은 상호가 고성식해물철판구이로 바뀌었고 네이버 예약이 열려 있으니 12시로 잡아 두면 서점 일정이 편합니다.</span>
+            <span>서점은 목요일 11시 오픈. 고식당은 상호가 고성식해물철판구이로 바뀌었고 <a href="https://booking.naver.com/booking/6/bizes/1717020" target="_blank" rel="noreferrer">네이버 예약</a>이 열려 있으니 12시로 잡아 두면 서점 일정이 편합니다.</span>
           </article>
           <article class="check-card">
             <i class="ph ph-fork-knife" aria-hidden="true"></i>
@@ -273,7 +283,7 @@
           <article class="check-card">
             <i class="ph ph-phone" aria-hidden="true"></i>
             <strong>백도수산 재고와 식사 시간</strong>
-            <span>네이버 기준 매일 09~16시 영업이지만 물량 소진 시 조기 마감합니다. 체크아웃 전에 033-633-9555로 재고와 식사 가능 시간을 확인합니다.</span>
+            <span>네이버 기준 매일 09~16시 영업이지만 물량 소진 시 조기 마감합니다. 체크아웃 전에 <a href="tel:0336339555">033-633-9555</a>로 재고와 식사 가능 시간을 확인합니다.</span>
           </article>
           <article class="check-card">
             <i class="ph ph-storefront" aria-hidden="true"></i>
@@ -288,7 +298,7 @@
           <article class="check-card">
             <i class="ph ph-clock" aria-hidden="true"></i>
             <strong>송지호 바다하늘길 운영 확인</strong>
-            <span>9월에 개장한 해상 스카이워크는 11월 운영 주체가 미공지입니다. 가려면 고성군 관광과 033-680-3356에 먼저 전화하고, 안 되면 철새관망타워만 봅니다.</span>
+            <span>9월에 개장한 해상 스카이워크는 11월 운영 주체가 미공지입니다. 가려면 고성군 관광과 <a href="tel:0336803356">033-680-3356</a>에 먼저 전화하고, 안 되면 철새관망타워만 봅니다.</span>
           </article>
           <article class="check-card is-excluded">
             <i class="ph ph-prohibit" aria-hidden="true"></i>
@@ -391,6 +401,6 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
-    <script src="app.js?v=20261103"></script>
+    <script src="app.js?v=20261103b"></script>
   </body>
 </html>
